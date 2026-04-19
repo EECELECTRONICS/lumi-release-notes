@@ -1,0 +1,212 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Release Notes & Compatibility Matrix</title>
+    <style>
+      body{font-family:Arial, sans-serif; margin:40px; background:#fdfdfd; color:#222;}
+      h2{margin-top:40px; border-bottom:2px solid #444; padding-bottom:4px;}
+      ul{margin-top:0;}
+      table{border-collapse:collapse; margin-top:10px;}
+      th, td{border:1px solid #888; padding:6px 12px; text-align:center;}
+      th{background:#eee;}
+    </style>
+  </head>
+  <body>
+    <h2>Software Release Notes</h2>
+
+    <p><strong>v2.5.0</strong></p>
+    <ul>
+      <li>New: Language support is added for the web interface: German, Dutch, Swedish, Norwegian, English, Turkish, Danish, Finnish n</li>
+      <li>New: Modbus TCP slave support (disabled by default, activates automatically once a static IP address is configured)</li>
+      <li>New: Help section with guidance on Modbus TCP and static IP setup</li>
+      <li>New: Identify button is added for each luminarie in commissioning mode.</li>
+      <li>New: LED status blinking is limited to one hour post-boot for all non-commissioned units.</li>
+      <li>New: Static IP configuration is added to the commissioning mode.</li>
+      <li>New: First-time commissioning is more reliable on devices with tight memory</li>
+      <li>New: Hardware and firmware compatibility is verified before applying an OTA update, preventing mismatched upgrades</li>
+      <li>New: Login page lockout timer is added for throttling.</li>
+      <li>Improvement: Streamlined the embedded web interface for better usability and cross-device compatibility.</li>
+      <li>Security and stability updates</li>
+    </ul>
+
+    <p><strong>v2.1.2</strong></p>
+    <ul>
+      <li>Fixed web server disappearing after a prolong usage of the system</li>
+      <li>Added the ability to fetch emergency lighting reports from the local web interface</li>
+      <li>Fixed system stability causing too dynamic reorganization of luminaries</li>
+      <li>Improved OTA reliability significantly</li>
+      <li>Cloud improvements for saving emergency lighting reports for up to 3 years</li>
+      <li>The email feature is disabled until confirmed via the activation link</li>
+      <li>Security updates</li>
+      <li>Performance enchancements</li>
+    </ul>
+
+    <p><strong>v2.0.2</strong></p>
+    <ul>
+      <li>Added Firmware Version column to monitoring page</li>
+      <li>Added Signal Strength (RSSI) column to monitoring page (default -120 if unknown)</li>
+    </ul>
+
+    <p><strong>v2.0.1</strong></p>
+    <ul>
+      <li>Web interface redesign</li>
+      <li>New feature: Project Information section (Project Name, IP Address, Device ID, Total Devices)</li>
+    </ul>
+
+    <br>
+
+    <p><strong>v1.12.0</strong></p>
+    <ul>
+      <li>New: Language support is added for the web interface: German, Dutch, Swedish, Norwegian, English, Turkish, Danish, Finnish n</li>
+      <li>New: Modbus TCP slave support (disabled by default, activates automatically once a static IP address is configured)</li>
+      <li>New: Help section with guidance on Modbus TCP and static IP setup</li>
+      <li>New: Identify button is added for each luminarie in commissioning mode.</li>
+      <li>New: LED status blinking is limited to one hour post-boot for all non-commissioned units.</li>
+      <li>New: Static IP configuration is added to the commissioning mode.</li>
+      <li>New: First-time commissioning is more reliable on devices with tight memory</li>
+      <li>New: Hardware and firmware compatibility is verified before applying an OTA update, preventing mismatched upgrades</li>
+      <li>New: Login page lockout timer is added for throttling.</li>
+      <li>Improvement: Streamlined the embedded web interface for better usability and cross-device compatibility.</li>
+      <li>Security and stability updates</li>
+    </ul>
+
+    <p><strong>v1.9.9</strong></p>
+    <ul>
+      <li>Fixed web server disappearing after a prolong usage of the system</li>
+      <li>Added the ability to fetch emergency lighting reports from the local web interface</li>
+      <li>Fixed system stability causing too dynamic reorganization of luminaries</li>
+      <li>Improved OTA reliability significantly</li>
+      <li>Cloud improvements for saving emergency lighting reports for up to 3 years</li>
+      <li>The email feature is disabled until confirmed via the activation link</li>
+      <li>Security updates</li>
+      <li>Performance enchancements</li>
+    </ul>
+
+    <p><strong>v1.6.7</strong></p>
+    <ul>
+      <li>Web interface redesign</li>
+      <li>New feature: Project Information section (Project Name, IP Address, Device ID, Total Devices)</li>
+    </ul>
+
+    <p><strong>v1.5.5</strong></p>
+    <ul>
+      <li>Fixed an issue where duplicate projects could appear due to mDNS, causing multiple meshes like
+  <code>projectname-2.local</code>.
+          Now duplicate mesh creation is prevented</li>
+    </ul>
+
+    <h2>Hardware Release Notes</h2>
+    <p><strong>v2.0</strong></p>
+    <ul>
+      <li>Fixed internal RAM supply voltage</li>
+      <li>Changed the pin for emergency driver communication</li>
+    </ul>
+
+    <h2>Software Compatibility Matrix</h2>
+    <table>
+      <tr>
+        <th></th>
+        <th>v2.5.0</th>
+        <th>v2.1.2</th>
+        <th>v2.0.2</th>
+        <th>v2.0.1</th>
+        <th>v1.12.0</th>
+        <th>v1.9.9</th>
+        <th>v1.6.7</th>
+        <th>v1.5.5</th>
+      </tr>
+      <tr>
+        <th>v2.5.0</th>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v2.1.2</th>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v2.0.2</th>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v2.0.1</th>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v1.12.0</th>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v1.9.9</th>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v1.6.7</th>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <th>v1.5.5</th>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+      </tr>
+    </table>
+    <p>It is recommended to make sure all luminaries in a system have be the same FW version. Restart the OTA
+  process if there are luminaries with different FW version</p>
+  </body>
+  </html>
